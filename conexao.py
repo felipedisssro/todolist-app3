@@ -1,14 +1,15 @@
 import psycopg2
 from dotenv import load_dotenv
-import os 
+import os
 
 load_dotenv()
 
-# Função que retorna a conexão com o banco de dados portgres
+# Função que retorna a conexão 
+# com banco de dados postgres
 def get_conexao():
-    conn = psycopg2.connect (
-        dbname =os.getenv('DB_DATABASE'),
-        user =os.getenv('DB_USER'),
+    conn = psycopg2.connect(
+        dbname=os.getenv('DB_DATABASE'),
+        user=os.getenv('DB_USER'),
         password=os.getenv('DB_PASSWORD'),
         host=os.getenv('DB_HOST'),
         port=os.getenv('DB_PORT')
